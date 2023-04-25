@@ -1,13 +1,21 @@
-body {
-  color: rgb(207, 249, 255);
-  background-color: rgb(20, 3, 52);
+:root {
+  --purpleDark: #140334;
+  --purpleMedium: #220047;
+  --purpleLight: #2a0057;
+  --lightBlue: #cff9ff;
+}
 
-  background: linear-gradient(135deg, rgba(20, 3, 52, 0.25), transparent 25%) -10px
-      0/ 20px 20px,
-    linear-gradient(225deg, #220047 25%, transparent 25%) -10px 0/ 20px 20px,
-    linear-gradient(315deg, rgba(20, 3, 52, 0.25) 25%, transparent 25%) 0px 0/ 20px
-      20px,
-    linear-gradient(45deg, #220047 25%, #2a0057 25%) 0px 0/ 20px 20px;
+body {
+  color: var(--lightBlue);
+  background-color: var(--purpleDark);
+
+  background: linear-gradient(135deg, var(--purpleDark), transparent 25%) -10px 0/
+      20px 20px,
+    linear-gradient(225deg, var(--purpleMedium) 25%, transparent 25%) -10px 0/
+      20px 20px,
+    linear-gradient(315deg, var(--purpleDark) 25%, transparent 25%) 0px 0/ 20px 20px,
+    linear-gradient(45deg, var(--purpleMedium) 25%, var(--purpleLight) 25%) 0px
+      0/ 20px 20px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -35,5 +43,6 @@ h3 {
 
 .pictures {
   display: grid;
+  outline: 10px;
   grid-template-columns: 1fr 1fr;
 }
