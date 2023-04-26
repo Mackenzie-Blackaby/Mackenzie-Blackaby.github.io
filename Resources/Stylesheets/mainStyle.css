@@ -1,0 +1,78 @@
+:root {
+  --blurAmount: 1px;
+}
+
+html {
+  background-color: var(--bgDark);
+  background: linear-gradient(135deg, var(--bgDark), transparent 25%) -10px 0/
+      20px 20px,
+    linear-gradient(225deg, var(--bgMedium) 25%, transparent 25%) -10px 0/ 20px
+      20px,
+    linear-gradient(315deg, var(--bgDark) 25%, transparent 25%) 0px 0/ 20px 20px,
+    linear-gradient(45deg, var(--bgMedium) 25%, var(--bgLight) 25%) 0px 0/ 20px 20px;
+}
+
+body {
+  color: var(--textColor);
+  font-family: "Monaco", Consolas, "Courier New", Courier, monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  padding: 5px;
+  margin: auto;
+  backdrop-filter: blur(var(--blurAmount));
+  height: 99vh;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: auto;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+li {
+  font-size: 1.5rem;
+  list-style-type: upper-roman;
+  text-align: center;
+  list-style-position: inside;
+}
+
+a {
+  color: var(--linkColor);
+}
+
+hr {
+  border-color: var(--boxBackground);
+  border-width: 5px;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.pictures {
+  display: grid;
+  outline: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.boxed {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  background-color: var(--boxBackground);
+  border: 5px solid var(--textColor);
+  border-radius: 20px;
+  width: 10cm;
+  padding: 10px;
+}

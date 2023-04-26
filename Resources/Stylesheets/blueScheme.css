@@ -1,0 +1,8 @@
+:root {
+  --bgDark: #89d8ff;
+  --bgMedium: #abe6ff;
+  --bgLight: #c5f1ff;
+  --textColor: #000000;
+  --boxBackground: rgba(255, 255, 255, 0.5);
+  --linkColor: #bb0000;
+}
