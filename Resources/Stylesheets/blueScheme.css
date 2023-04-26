@@ -3,6 +3,6 @@
   --bgMedium: #abe6ff;
   --bgLight: #c5f1ff;
   --textColor: #000000;
-  --boxBackground: rgba(255, 255, 255, 0.5);
+  --boxBackground: rgb(255, 255, 255);
   --linkColor: #bb0000;
 }

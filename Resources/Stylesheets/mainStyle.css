@@ -54,6 +54,8 @@ a {
 }
 
 hr {
+  color: black;
+  border: groove;
   border-color: var(--boxBackground);
   border-width: 5px;
   border-radius: 20px;
@@ -71,8 +73,19 @@ hr {
   margin-right: auto;
   margin-top: 20px;
   background-color: var(--boxBackground);
-  border: 5px solid var(--textColor);
+  border: 5px inset white;
   border-radius: 20px;
   width: 10cm;
   padding: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.backgroundImage {
+  opacity: 0.3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  filter: blur(5px);
 }

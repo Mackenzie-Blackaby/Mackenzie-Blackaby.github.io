@@ -4,5 +4,9 @@
   --bgLight: #2a0057;
   --textColor: #cff9ff;
   --boxBackground: rgba(255, 255, 255, 0.5);
-  --linkColor: #bb0000;
+  --linkColor: #ff9393;
+}
+
+a {
+  margin: auto;
 }
