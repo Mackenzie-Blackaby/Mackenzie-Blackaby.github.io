@@ -1,0 +1,129 @@
+:root {
+  --topbarHeight: 20vh;
+  --pictureSize: 16vh;
+  --pictureBorder: calc((var(--topbarHeight) - var(--pictureSize)) / 2);
+  --topBarBorderStyle: inset;
+  --topBarBorderColor: #ccc;
+  --topbarBorderWidth: 0.5;
+  --xBorder: calc(var(--topbarBorderWidth) * 1vh) var(--topBarBorderStyle)
+    var(--topBarBorderColor);
+  --yBorder: calc(var(--topbarBorderWidth) * 1vh) var(--topBarBorderStyle)
+    var(--topBarBorderColor);
+
+  --colorTopBarBackground: #fff;
+  --colorMainBackground: rgb(222, 222, 222);
+  --colorMainText: #000;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--colorMainBackground);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-left: 5%;
+  background-color: var(--colorMainText);
+  height: min-content;
+  display: flex;
+  align-items: self-start;
+  justify-content: left;
+  color: var(--colorMainBackground);
+  border-top: var(--yBorder);
+  border-color: darkgray;
+}
+
+.TopBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  vertical-align: top;
+  height: var(--topbarHeight);
+  background-color: var(--colorTopBarBackground);
+  border-bottom: var(--yBorder);
+  border-right: var(--yBorder);
+  margin-bottom: 0.5vh;
+  margin-top: 0;
+}
+
+.TopBar-icon {
+  margin-top: var(--pictureBorder);
+  margin-left: var(--pictureBorder);
+  height: var(--pictureSize);
+  border-right: var(--xBorder);
+  border-bottom: var(--yBorder);
+  border-radius: 100px;
+  pointer-events: none;
+}
+
+.TopBar-title {
+  font-size: 5vh;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  margin: auto;
+}
+
+.TopBar-Button {
+  display: grid;
+  margin: auto;
+  margin-right: var(--pictureBorder);
+  width: var(--pictureSize);
+  height: var(--pictureSize);
+  border-radius: 100px;
+  border-right: var(--xBorder);
+  border-bottom: var(--yBorder);
+  border-radius: 100px;
+}
+.TopBar-Button:active {
+  background-color: darkgray;
+}
+
+.TopBar-MenuIcon {
+  height: 10vh;
+  margin: auto;
+  pointer-events: none;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: 50vh 50vh 50vh;
+}
+
+.article {
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  height: 50vh;
+  max-height: 50vh;
+}
+.article-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+.article-image {
+  display: flex;
+  right: 0;
+  top: 0;
+  width: 50vw;
+  max-width: 50vh;
+  margin-left: auto;
+  margin-right: 0;
+}
