@@ -2,7 +2,17 @@
   --bgDark: #032600;
   --bgMedium: #0b4300;
   --bgLight: #116500;
-  --textColor: #cff9ff;
-  --boxBackground: rgba(255, 255, 255, 0.5);
-  --linkColor: #bb0000;
+  --textColor: #484848;
+  --boxBackground: rgba(255, 255, 255, 0.575);
+  --linkColor: #cedfff;
+}
+
+li {
+  color: var(--linkColor);
+}
+
+.listImage {
+  height: 200px;
+  margin: auto;
+  padding: auto;
 }

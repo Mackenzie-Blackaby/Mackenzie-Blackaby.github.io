@@ -47,10 +47,12 @@ li {
   list-style-type: upper-roman;
   text-align: center;
   list-style-position: inside;
+  line-height: 50px;
 }
 
 a {
   color: var(--linkColor);
+  margin: auto;
 }
 
 hr {
@@ -66,26 +68,26 @@ hr {
   display: grid;
   outline: 10px;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content;
 }
 
 .boxed {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
+  margin: auto;
   background-color: var(--boxBackground);
   border: 5px inset white;
   border-radius: 20px;
-  width: 10cm;
+  width: 500px;
   padding: 10px;
   overflow: hidden;
   position: relative;
 }
 
 .backgroundImage {
+  z-index: -1;
   opacity: 0.3;
   position: absolute;
   left: 0;
   top: 0;
-  height: 100%;
+  width: 100%;
   filter: blur(5px);
 }

@@ -7,6 +7,8 @@
   --linkColor: #ff9393;
 }
 
-a {
+p {
+  width: 500px;
+  height: auto;
   margin: auto;
 }

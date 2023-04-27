@@ -18,4 +18,8 @@ var x = setInterval(function () {
     " Minutes and " +
     seconds +
     " Seconds! ";
+
+  if (difference < 0) {
+    window.location.href = "Pages/AnniversaryYear2.html";
+  }
 });
