@@ -1,8 +1,9 @@
 :root {
-  --bgDark: #89d8ff;
-  --bgMedium: #abe6ff;
-  --bgLight: #c5f1ff;
-  --textColor: #000000;
-  --boxBackground: rgb(255, 255, 255);
-  --linkColor: #bb0000;
+  --borderStyle: inset;
+  --borderColor: #ccc;
+  --borderWidth: 0.5;
+  --colorTopBarBackground: #abe6ff;
+  --colorMainBackground: #89d8ff;
+  --colorMainText: #000000;
+  --colorLink: #bb0000;
 }

@@ -1,93 +1,176 @@
 :root {
-  --blurAmount: 1px;
+  --topbarHeight: 20vh;
+  --pictureSize: 16vh;
+  --pictureBorder: calc((var(--topbarHeight) - var(--pictureSize)) / 2);
+  --borderStyle: inset;
+  --borderColor: #ccc;
+  --borderWidth: 0.5;
+  --xBorder: calc(var(--borderWidth) * 1vh) var(--borderStyle)
+    var(--borderColor);
+  --yBorder: calc(var(--borderWidth) * 1vh) var(--borderStyle)
+    var(--borderColor);
+
+  --colorTopBarBackground: #fff;
+  --colorMainBackground: rgb(222, 222, 222);
+  --colorMainText: #000;
+  --colorboxBackground: rgba(255, 255, 255, 0.5);
+  --colorLink: #ff9393;
 }
 
+body,
 html {
-  background-color: var(--bgDark);
-  background: linear-gradient(135deg, var(--bgDark), transparent 25%) -10px 0/
-      20px 20px,
-    linear-gradient(225deg, var(--bgMedium) 25%, transparent 25%) -10px 0/ 20px
-      20px,
-    linear-gradient(315deg, var(--bgDark) 25%, transparent 25%) 0px 0/ 20px 20px,
-    linear-gradient(45deg, var(--bgMedium) 25%, var(--bgLight) 25%) 0px 0/ 20px 20px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 body {
-  color: var(--textColor);
-  font-family: "Monaco", Consolas, "Courier New", Courier, monospace;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  padding: 5px;
-  margin: auto;
-  backdrop-filter: blur(var(--blurAmount));
-  height: 99vh;
-}
-
-h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  margin: auto;
-}
-
-h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin: auto;
-}
-
-h3 {
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin: 0;
-}
-
-li {
-  font-size: 1.5rem;
-  list-style-type: upper-roman;
-  text-align: center;
-  list-style-position: inside;
-  line-height: 50px;
+  background-color: var(--colorMainBackground);
+  color: var(--colorMainText);
+  font-family: Lobster, Cambria, Cochin, Georgia, Times, "Times New Roman",
+    serif;
+  font-weight: lighter;
+  font-size: larger;
 }
 
 a {
-  color: var(--linkColor);
+  color: var(--colorLink);
+  text-decoration: underline;
+}
+
+p {
+  margin: auto;
+  width: 80vw;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-left: 5%;
+  background-color: var(--colorMainText);
+  height: min-content;
+  display: flex;
+  align-items: self-start;
+  justify-content: left;
+  color: var(--colorMainBackground);
+  border-top: var(--yBorder);
+  border-color: darkgray;
+}
+
+.TopBar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: 1fr;
+  height: var(--topbarHeight);
+  background-color: var(--colorTopBarBackground);
+  border-bottom: var(--yBorder);
+  border-right: var(--yBorder);
+  margin-bottom: 0.5vh;
+  margin-top: 0;
+}
+
+.TopBar-icon {
+  margin-top: var(--pictureBorder);
+  margin-left: var(--pictureBorder);
+  height: var(--pictureSize);
+  border-right: var(--xBorder);
+  border-bottom: var(--yBorder);
+  border-radius: 100px;
+  pointer-events: none;
+}
+
+.TopBar-title {
+  font-size: 5vh;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
   margin: auto;
 }
 
-hr {
-  color: black;
-  border: groove;
-  border-color: var(--boxBackground);
-  border-width: 5px;
-  border-radius: 20px;
-  margin: 20px;
+.TopBar-Button {
+  display: grid;
+  margin: auto;
+  margin-right: var(--pictureBorder);
+  width: var(--pictureSize);
+  height: var(--pictureSize);
+  border-radius: 100px;
+  border-right: var(--xBorder);
+  border-bottom: var(--yBorder);
+  border-radius: 100px;
+}
+.TopBar-Button:active {
+  background-color: darkgray;
 }
 
-.pictures {
+.TopBar-MenuIcon {
+  height: 10vh;
+  margin: auto;
+  pointer-events: none;
+}
+
+.content {
   display: grid;
-  outline: 10px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: min-content;
+  grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.article {
+  margin: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: center;
+}
+.article-title {
+  font-size: 3vw;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+.article-image {
+  margin: auto;
+  background-size: cover;
+  width: 90%;
+  object-fit: contain;
+}
+
+.centeredObject {
+  text-align: center;
+  margin: auto;
+  align-items: center;
 }
 
 .boxed {
-  margin: auto;
-  background-color: var(--boxBackground);
-  border: 5px inset white;
-  border-radius: 20px;
-  width: 500px;
-  padding: 10px;
   overflow: hidden;
   position: relative;
+  border: var(--xBorder);
+  width: 90vw;
+  padding: 20px;
+  background-color: var(--colorboxBackground);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.boxedMinimal {
+  border: var(--xBorder);
+  width: auto;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
 }
 
 .backgroundImage {
   z-index: -1;
   opacity: 0.3;
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
+  float: left;
+  height: 100vh;
+  width: min(100vw);
+  object-fit: cover;
   filter: blur(5px);
 }

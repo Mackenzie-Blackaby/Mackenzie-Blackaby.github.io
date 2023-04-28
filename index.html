@@ -2,6 +2,7 @@
 <head>
   <title>Bunny countdown!</title>
   <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="Resources/Fonts/Lobster.css" />
   <link
     rel="stylesheet"
     type="text/css"
@@ -14,25 +15,36 @@
   />
 </head>
 <body>
-  <h1>Shush, no peeking! This page opens on our anniversary!</h1>
-  <hr />
-  <h2>Time left before our anniversary:</h2>
-  <br /><br />
-  <h3 id="countdown" class="boxed">0 Days, 0 Hours, 0 Minutes and 0 Seconds</h3>
-  <br /><br /><br />
-  <div class="pictures">
-    <div class="leftPic">
-      <h3>You rn, waiting to know what the secret is:</h3>
-      <img src="Resources/GIFs/waitingBun.gif" />
+  <div class="TopBar">
+    <h1 class="TopBar-title">Anniversary Countdown!!</h1>
+  </div>
+  <img
+    class="backgroundImage centeredObject"
+    src="Resources/Images/Akadir.jpg"
+  />
+  <br />
+  <div class="centeredObject boxed">
+    <h1>Time left before our anniversary:</h1>
+    <br /><br />
+    <h2 id="countdown">0 Days, 0 Hours, 0 Minutes and 0 Seconds</h2>
+    <br />
+  </div>
+  <div class="content centeredObject">
+    <div class="article">
+      <h3 class="article-title">You, waiting to see next year's secret:</h3>
+      <img class="article-image" src="Resources/GIFs/waitingBun.gif" />
     </div>
-    <div class="rightPic">
-      <h3>Me, coding all of this for you:</h3>
-      <img src="Resources/GIFs/me.gif" />
+    <div class="article">
+      <h3 class="article-title">Me, coding all of this for you:</h3>
+      <img class="article-image" src="Resources/GIFs/me.gif" />
     </div>
   </div>
-  <a href="Pages/bunbun.html"
-    >Please click here to access the link menu while you wait!</a
-  >
+  <br />
+  <div style="text-align: center">
+    <a class="centeredObject" href="Pages/links.html"
+      >Please click here to access the link menu while you wait!</a
+    >
+  </div>
 </body>
 
 <script src="Resources/JavaScript/Countdown.js"></script>

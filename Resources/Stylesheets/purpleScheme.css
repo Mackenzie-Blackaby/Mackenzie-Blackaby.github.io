@@ -1,14 +1,8 @@
 :root {
-  --bgDark: #140334;
-  --bgMedium: #220047;
-  --bgLight: #2a0057;
-  --textColor: #cff9ff;
-  --boxBackground: rgba(255, 255, 255, 0.5);
-  --linkColor: #ff9393;
-}
-
-p {
-  width: 500px;
-  height: auto;
-  margin: auto;
+  --borderStyle: inset;
+  --borderColor: #ccc;
+  --borderWidth: 0.5;
+  --colorTopBarBackground: #400a7a;
+  --colorMainBackground: #220047;
+  --colorMainText: #cff9ff;
 }
