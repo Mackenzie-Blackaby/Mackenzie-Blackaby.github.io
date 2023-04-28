@@ -19,7 +19,7 @@ var x = setInterval(function () {
     seconds +
     " Seconds! ";
 
-  if (difference < 0) {
+  if (days == 0 && hours == 0 && minutes == 0 && seconds == 0) {
     window.location.href = "Pages/AnniversaryYear2.html";
   }
 });
